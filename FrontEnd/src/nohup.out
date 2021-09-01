@@ -1,0 +1,8 @@
+(node:1555) ExperimentalWarning: The ESM module loader is experimental.
+file:///home/ubuntu/Transporte/MBPruebas/FrontEnd/src/index.js:8
+    <BrowserRouter>
+    ^
+
+SyntaxError: Unexpected token '<'
+    at Loader.moduleStrategy (internal/modules/esm/translators.js:117:18)
+    at async link (internal/modules/esm/module_job.js:42:21)

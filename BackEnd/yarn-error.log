@@ -1,0 +1,74 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.15.2/libexec/bin/yarn.js add express nodemailer nodemon
+
+PATH: 
+  /Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Library/TeX/texbin:/usr/local/share/dotnet:/opt/X11/bin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/jorgeruiz/.zsh/misc
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  10.15.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: EACCES: permission denied, mkdir '/Users/jorgeruiz/Desktop/Pruebas/MBPruebas/BackEnd/node_modules/fsevents/src'
+
+npm manifest: 
+  {
+    "name": "login",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+      "dev": "nodemon server.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@material-ui/core": "^4.10.2",
+      "@material-ui/icons": "^4.9.1",
+      "@material-ui/styles": "^4.10.0",
+      "@testing-library/jest-dom": "^4.2.4",
+      "@testing-library/react": "^9.5.0",
+      "@testing-library/user-event": "^7.2.1",
+      "axios": "^0.19.2",
+      "axioss": "0.0.1-security",
+      "bcrypt": "*",
+      "bcryptjs": "*",
+      "body-parser": "^1.17.2",
+      "cookie-parser": "^1.4.5",
+      "core-util-is": "^1.0.2",
+      "cors": "^2.8.4",
+      "express": "^4.17.1",
+      "html-pdf": "^2.2.0",
+      "http-proxy-middleware": "^1.0.5",
+      "js-cookie": "^2.2.1",
+      "jsonwebtoken": "^7.4.2",
+      "jwt-decode": "^2.2.0",
+      "mysql": "^2.14.1",
+      "mysql2": "^1.6.1",
+      "nodemailer": "^6.5.0",
+      "nodemon": "^1.19.4",
+      "pdf-creator-node": "^1.4.2",
+      "phantomjs": "^2.1.7",
+      "phantomjs-prebuilt": "^2.1.16",
+      "react": "^16.13.1",
+      "react-dom": "^16.13.1",
+      "react-router-dom": "^5.2.0",
+      "react-scripts": "^3.4.3",
+      "sequelize": "^4.38.0"
+    },
+    "devDependencies": {
+      "handlebars": "^4.7.7"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

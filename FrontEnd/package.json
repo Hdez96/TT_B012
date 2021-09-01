@@ -1,0 +1,71 @@
+{
+  "name": "vistas",
+  "version": "0.1.0",
+  "main": "./src/Login/Login.jsx",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@material-ui/pickers": "^3.2.10",
+    "@material-ui/styles": "^4.10.0",
+    "@rpldy/upload-button": "^0.7.4",
+    "@rpldy/upload-preview": "^0.7.4",
+    "@rpldy/uploady": "^0.7.4",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "babel-core": "^6.26.3",
+    "cookie-parser": "^1.4.5",
+    "esm": "^3.2.25",
+    "file-saver": "^2.0.2",
+    "forever-monitor": "^3.0.3",
+    "formik": "^2.2.6",
+    "http-proxy-middleware": "^1.0.5",
+    "js-cookie": "^2.2.1",
+    "jwt-decode": "^2.2.0",
+    "mysql": "^2.11.1",
+    "phantomjs": "^2.1.7",
+    "phantomjs-prebuilt": "^2.1.16",
+    "react": "^16.14.0",
+    "react-avatar-uploader": "^1.0.3",
+    "react-dom": "^16.14.0",
+    "react-image-file": "^0.3.0",
+    "react-images-uploading": "^3.1.2",
+    "react-overlay-trigger": "^1.0.5",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-signature-canvas": "^1.0.3",
+    "react-simple-timefield": "^3.2.3",
+    "react-tooltip": "^4.2.17",
+    "reactstrap": "^8.9.0",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^10.15.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "serve -s build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "node server.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://10.138.0.10:5000"
+}

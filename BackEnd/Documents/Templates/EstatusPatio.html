@@ -1,0 +1,85 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+	        <title>Estatus Patio</title> 
+	        <link rel="stylesheet" href="style.css">
+	        <link rel="stylesheet" href="http://localhost:3000/normalize.min.css">
+          	<link rel="stylesheet" href="http://localhost:3000/paper.css">
+		</head>
+		<style type="text/css">
+			body {
+            	background: rgb(255,255,255); 
+		    }
+		    page {
+		        background: white;
+		        display: block;
+		        margin: 0 auto;
+		        margin-bottom: 0.5cm;
+		        box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+		    }
+	
+		    table.tablaFormato {
+		    	font-family: Arial, Helvetica, sans-serif;
+		    	border: 2px solid #000000;
+		        margin-left: 8px; 
+		        text-align: left;
+		        border-collapse: collapse;
+		    }
+		    table.tablaFormato td, table.tablaFormato th {
+		        border: 2px solid #000000;
+		        padding: 1px 4px;
+		    }
+	    	table.tablaFormato tbody td {
+		        font-size: 12px;
+		        font-weight: bold;
+		        color: #000000;
+		    }
+		    table.tablaFormato tfoot td {
+		        font-size: 14px;
+		    }
+		    table.tablaFormato tfoot .links {
+		    }
+		    table.tablaFormato tfoot .links a{
+		        background: #1C6EA4;
+		        color: #FFFFFF;
+		        border-radius: 5px;
+		    }
+		    .inlineTable {
+	            display: inline-block;
+	            border-spacing: 1px;
+	        }
+	        @page { 
+		      size: letter 
+		    }
+		</style>
+		<body class="letter">
+{{#each datos}}
+			<section class="sheet padding-10mm">
+				<br>
+				<img style="margin-left: 10px" src="http://localhost:3000/mb.png" width="375" height="65">
+				<br><br><br>
+				<center>
+		
+					<table class="tablaFormato">
+						<tbody align="center">
+							<tr>
+								<td></td> <td bgcolor=#86B404 colspan="5">{{this.Fecha}}</td>
+							</tr>
+							<tr bgcolor="yellow">
+								<td>Económico</td> <td>Estatus</td> <td>Sistema</td> <td>Descripción de falla</td> <td>Kilometraje con<br>el que se ingresa</td> <td>Fecha de liberación</td>
+							</tr>
+							{{#each Registros}}
+							<tr>
+								<td>{{this.NumeroEconomico}}</td> <td>{{this.Estatus}}</td><td>{{this.Sistema}}</td><td>{{this.Descripciondefalla}}</td><td>{{this.Kilometraje}}</td><td>{{this.Fechadeliberacion}}</td>
+							</tr>
+							{{/each}}
+						</tbody>
+					</table>
+					<br>
+			
+				</center>
+			</section>
+{{/each}}
+		</body>
+	</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+    <html>
+       <head>
+          <meta charset="utf-8">
+          <title>Consumo de Gasolina</title> 
+          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="http://localhost:3000/normalize.min.css">
+          <link rel="stylesheet" href="http://localhost:3000/paper.css">
+          
+       </head>
+    <style type="text/css">
+    body {
+            background: rgb(255,255,255); 
+         }
+       page {
+         background: white;
+         display: block;
+         margin: 0 auto;
+         margin-bottom: 0.5cm;
+         box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+       }
+       @media print {
+         body, page {
+           margin: 0;
+           box-shadow: 0;
+         }
+       }
+ 
+      table.tabb {
+      border: 1px solid #000000;
+      width: 95%;
+      text-align: left;
+      border-collapse: collapse;
+      margin-left: 25px;
+    }
+    table.tabb td, table.tabb th {
+      border: 2px solid #000000;
+    }
+    table.tabb tbody td {
+      font-size: 12px;
+      color: #000000;
+    }
+    table.tabb thead {
+      background: #918C8E;
+      background: -moz-linear-gradient(top, #aca9aa 0%, #9c9799 66%, #918C8E 100%);
+      background: -webkit-linear-gradient(top, #aca9aa 0%, #9c9799 66%, #918C8E 100%);
+      background: linear-gradient(to bottom, #aca9aa 0%, #9c9799 66%, #918C8E 100%);
+      border-bottom: 2px solid #444444;
+    }
+    table.tabb thead th {
+      font-size: 14px;
+      font-weight: bold;
+      color: #000000;
+      text-align: center;
+      border-left: 2px solid #D0E4F5;
+    }
+    table.tabb thead th:first-child {
+      border-left: none;
+    }
+
+    table.tabb tfoot td {
+      font-size: 14px;
+    }
+    table.tabb tfoot .links {
+      text-align: right;
+    }
+    table.tabb tfoot .links a{
+      display: inline-block;
+      background: #1C6EA4;
+      color: #FFFFFF;
+      padding: 2px 8px;
+      border-radius: 5px;
+    }
+    @page { 
+      size: letter landscape 
+    }
+
+    </style>
+
+
+      <body class="letter landscape">
+
+      <section class="sheet padding-10mm">
+        <br>
+        <img style="margin-left: 10px" src="http://localhost:3000/mb.png" width="375" height="65">
+        <br>
+        
+        <center><p style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 20px;">Consumo de Diesel &nbsp&nbsp&nbsp&nbsp <span style="">Año: {{this.Año}}</span></p></center>
+        <table class="tabb">
+          <thead>
+            <tr style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 14px;">
+              <th>No. Eco</th>
+              <th>Enero</th>
+              <th>Febrero</th>
+              <th>Marzo</th>
+              <th>Abril</th>
+              <th>Mayo</th>
+              <th>Junio</th>
+              <th>Julio</th>
+              <th>Agosto</th>
+              <th>Septiembre</th>
+              <th>Octubre</th>
+              <th>Noviembre</th>
+              <th>Diciembre</th>
+              <th>TOTAL</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            {{#each users}}
+              <td>{{this.NumeroEconomico}}</td><td>{{this.ConsumoEnero}}</td><td>{{this.ConsumoFebrero}}</td><td>{{this.ConsumoMarzo}}</td><td>{{this.ConsumoAbril}}</td><td>{{this.ConsumoMayo}}</td><td>{{this.ConsumoJunio}}</td><td>{{this.ConsumoJulio}}</td><td>{{this.ConsumoAgosto}}</td><td>{{this.ConsumoSeptiembre}}</td><td>{{this.ConsumoOctubre}}</td><td>{{this.ConsumoNoviembre}}</td><td>{{this.ConsumoDiciembre}}</td><td>{{this.ConsumoTotal}}</td></tr>
+              {{/each}}
+              </tbody>
+            </tr>
+          </table>
+      </section> 
+
+   </body>
+    </html>
+    

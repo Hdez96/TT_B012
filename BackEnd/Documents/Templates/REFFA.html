@@ -1,0 +1,317 @@
+<!doctype html>
+    <html>
+       <head>
+          <meta charset="utf-8">
+          <title>Cédula de Revisión Técnica Inicial Del Autobús</title> 
+          <link rel="stylesheet" href="style.css">
+          <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css" integrity="sha512-5MZ2a2V0AfThJKbGBT9X4XpilJaUMg0fzjZPjoOckAgi0uwOPYEZcQ9vM1Phi0UiLjmAoB0bT9iyZEMJEIlLOw==" crossorigin="anonymous" />
+       </head>
+    <style type="text/css">
+
+       table.tablaFormato {
+        font-family: Arial, Helvetica, sans-serif;
+        border: 2px solid #000000;
+        width: 98%;
+        margin-left: 8px; 
+        text-align: left;
+        border-collapse: collapse;
+      }
+      table.tablaFormato td, table.tablaFormato th {
+        border: 2px solid #000000;
+        padding: 0px 1px;
+      }
+      table.tablaFormato tbody td {
+        font-size: 10px;
+        font-weight: bold;
+        color: #000000;
+      }
+      table.tablaFormato tfoot td {
+        font-size: 14px;
+      }
+      table.tablaFormato tfoot .links {
+      }
+      table.tablaFormato tfoot .links a{
+        background: #1C6EA4;
+        color: #FFFFFF;
+        border-radius: 2px;
+      }
+      
+
+    </style>
+
+
+    <body class="letter portrait">
+      <section class="sheet padding-10mm">
+
+      <img style="margin-left: 10px" src={{header.Foto1}} width="375" height="65">
+      
+      <center><table class="tablaFormato">
+      <tbody>
+      <tr><td colspan="18" style="font-family: 'Source Sans Pro', sans-serif; text-align: center; font-size: 18px;">REPORTE DEL ESTADO FÍSICO Y DEL FUNCIONAMIENTO DEL AUTOBÚS</td></tr>
+      </tbody>
+      </table>
+    </center>
+    <center>
+
+      <table class="tablaFormato" style="width: 87%; margin-top: 10px">
+      <tbody>        
+        
+          <tr>
+          <td colspan="2" style="font-family: 'Source Sans Pro', sans-serif; font-size: 12px;">EMPRESA OPERADORA</td>
+          <td colspan="2" style="font-family: 'Source Sans Pro', sans-serif; font-size: 12px;">{{datos.EmpresaOperadora}}</td>
+          <td colspan="2" style="font-family: 'Source Sans Pro', sans-serif; font-size: 12px; ">NO. ECONÓMICO: </td>
+          <td colspan="2" style="font-family: 'Source Sans Pro', sans-serif; font-size: 12px; ">{{datos.NumeroEconomico}}</td>          
+      </tbody>
+      </table>
+    </center>
+    <center>
+      <table class="tablaFormato" style="width: 100%; margin-top: 10px">
+        <tbody>
+          <tr>
+            <td colspan="1" style="text-align: center;">Marca</td>
+            <td colspan="1" style="text-align: center;">Año</td>
+            <td colspan="1" style="text-align: center;">Modelo</td>
+            <td colspan="1" style="text-align: center;">No. Motor</td>
+            <td colspan="1" style="text-align: center;">No. Transmisión</td>
+            <td colspan="1" style="text-align: center;">No. Chasis</td>
+            <td colspan="1" style="text-align: center;">Placas</td>
+            <td colspan="1" style="text-align: center;">Kilometraje</td>
+          </tr>
+          <tr>
+            <td colspan="1" style="text-align: center;">{{datosCamion.Marca}}</td>
+            <td colspan="1" style="text-align: center;">{{datosCamion.Año}}</td>
+            <td colspan="1" style="text-align: center;">{{datosCamion.Modelo}}</td>
+            <td colspan="1" style="text-align: center;">{{datosCamion.NumeroMotor}}</td>
+            <td colspan="1" style="text-align: center;">{{datosCamion.NumeroTransmision}}</td>
+            <td colspan="1" style="text-align: center;">{{datosCamion.NumeroChasis}}</td>
+            <td colspan="1" style="text-align: center;">{{datosCamion.PlacaVehicular}}</td>
+            <td colspan="1" style="text-align: center;">&nbsp</td>
+          </tr>
+        </tbody>
+        </table>
+      </center>
+    
+        <div style="margin-top: 10px; margin-left: 12px; border: 2px solid black; height: 100px;">&nbsp</div>
+        
+        <center>
+          <table class="tablaFormato" style="width: 100%; margin-top: 10px">
+            <tbody>
+              
+              <tr>
+                <td colspan="1" style="text-align: center;">No.</td>
+                <td colspan="1" style="text-align: center;">Código</td>
+                <td colspan="1" style="text-align: center;">Elemento</td>
+                <td colspan="1" style="text-align: center;">Estatus</td>
+                <td colspan="1" style="text-align: center;">Detalle</td>
+                <td colspan="1" style="text-align: center;">Localización</td>
+                <td colspan="1" style="text-align: center;">Observaciones</td>
+              </tr>
+              {{#each fallos}}
+              <tr>
+                <td colspan="1" style="text-align: center;">{{this.Contador}}</td>
+                <td colspan="1" style="text-align: center;">{{this.Codigo}}</td>
+                <td colspan="1" style="text-align: center;">{{this.Elemento}}</td>
+                <td colspan="1" style="text-align: center;">{{this.Estatus}}</td>
+                <td colspan="1" style="text-align: center;">{{this.Detalle}}</td>
+                <td colspan="1" style="text-align: center;">{{this.Ubicaciones}}</td>
+                <td colspan="1" style="text-align: center;">{{this.Observaciones}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+            </table>
+          </center>
+          <br>
+          <center><table class="tablaFormato">
+            <tbody>
+            <tr><td colspan="18" style="font-family: 'Source Sans Pro', sans-serif; text-align: center; font-size: 18px;">ANEXO DEL REPORTE DEL ESTADO FÍSICO Y DEL FUNCIONAMIENTO DEL AUTOBÚS</td></tr>
+            </tbody>
+            </table>
+          </center>
+          <center>
+            <table class="tablaFormato" style="width: 100%; margin-top: 10px">
+              <tbody>
+                <tr>
+                  <td colspan="1" style="text-align: center;">No.</td>
+                  <td colspan="1" style="text-align: center;">Código</td>
+                  <td colspan="1" style="text-align: center;">Elemento</td>
+                  <td colspan="1" style="text-align: center;">Detalle</td>
+                  <td colspan="1" style="text-align: center;">Ubicaciones</td>
+                  <td colspan="1" style="text-align: center;">Observaciones</td>
+                </tr>
+                <tr>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                </tr>
+                
+                <tr>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                  <td colspan="5">Fecha de último mantenimiento preventivo: {{datos.FechaMatePreventivo}}</td>
+                </tr>
+                <tr>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                  <td colspan="5">Verificación vehicular: {{datos.VerificacionVehicular}}</td>
+                </tr>
+                <tr>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                  <td colspan="5">Consumo promedio display o calculado: {{datos.ConsumoPromedioDispCalc}}</td>
+                </tr>
+                <tr>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                  <td colspan="5">Última fecha de fumigación: {{datos.UltFechaFumigacion}}</td>
+                </tr>
+                <tr>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                  <td colspan="2" rowspan="5" style="height: 50px; text-align: left; vertical-align: top;">Nota Extra: {{datos.NotaExtra}}</td>
+                  <td colspan="3"></td>
+                </tr>
+                
+                <tr>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                  <td colspan="2"></td>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                  <td colspan="2"></td>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                  <td colspan="2"></td>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                  <td colspan="2"></td>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                  <td colspan="2"></td>
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <td colspan="1" style="text-align: center;">&nbsp</td>
+                  <td colspan="2"></td>
+                  <td colspan="3"></td>
+                </tr>
+              </tbody>
+              </table>
+            </center>
+            <center>
+              <table class="tablaFormato" style="width: 100%; margin-top: 10px">
+                <tbody>
+                <!--  <tr style="visibility: collapse;">
+                    <td colspan="1" style="text-align: center;">No.</td>
+                    <td colspan="1" style="text-align: center;">Código</td>
+                    <td colspan="1" style="text-align: center;">Elemento</td>
+                    <td colspan="1" style="text-align: center;">Estatus</td>
+                    <td colspan="1" style="text-align: center;">Detalle</td>
+                    <td colspan="1" style="text-align: center;">Localización</td>
+                    <td colspan="2" style="text-align: center;">Observaciones</td>
+                    <td colspan="2" style="text-align: center;">Observaciones</td>
+                  </tr> -->
+                  <tr>
+                    <td colspan="1" style="text-align: center;">&nbsp</td>
+                    <td colspan="2" rowspan="2" style="text-align: center;">Acepto; Recepción por Empresa Operadora</td>
+                    <td colspan="1" style="text-align: center;height: 25px;">Cargo:</td>
+                    <td colspan="2" style="text-align: center;">&nbsp</td>
+                    <td colspan="1" style="text-align: center;height: 25px;">Fecha:</td>
+                    <td colspan="1" style="text-align: center;">&nbsp</td>
+                    <td colspan="1" rowspan="2" style="height: 50px; text-align: left; vertical-align: bottom;">Firma de enterado:</td>
+                  </tr>
+                  <tr>
+                    <td colspan="1" style="text-align: center;">&nbsp</td>
+                    <td colspan="1" style="text-align: center;">Nombre:</td>
+                    <td colspan="2" style="text-align: center;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+								</td>
+                    <td colspan="1" style="text-align: center;">Hora:</td>
+                    <td colspan="1" style="text-align: center;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+								&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+								</td>
+                  </tr>
+                </tbody>
+                </table>
+
+                <table class="tablaFormato" style="width: 100%; margin-top: 10px">
+                  <tbody>
+                    <tr style="visibility: collapse;">
+<!--                      <td colspan="1" style="text-align: center;">&nbsp</td>
+                      <td colspan="1" style="text-align: center;">&nbsp</td>
+                      <td colspan="1" style="text-align: center;">&nbsp</td>
+                      <td colspan="1" style="text-align: center;">&nbsp</td>
+                      <td colspan="1" style="text-align: center;">&nbsp</td>
+                      <td colspan="1" style="text-align: center;">&nbsp</td>
+                      <td colspan="2" style="text-align: center;">&nbsp</td>
+                      <td colspan="2" style="text-align: center;">&nbsp</td>
+                      <td colspan="1" style="text-align: center;">&nbsp</td>
+                      <td colspan="1" style="text-align: center;">&nbsp</td>
+                    </tr> -->
+                    <tr style="">
+                      <td colspan="2" style="text-align: center;">Fecha:</td>
+                      <td colspan="3" style="text-align: center;">Nombres:</td>
+                      <td colspan="2" style="text-align: center;">Firmas</td>
+                      <td colspan="3" style="text-align: center;">Nombres</td>
+                      <td colspan="2" style="text-align: center;">Firmas</td>
+                    </tr>
+                    <tr style="">
+                      <td colspan="2" style="height:80px; text-align: center;"></td>
+                      <td colspan="3" style="height:80px; text-align: left; vertical-align: bottom; height=250px;">Elaboró</td>
+                      <td colspan="2" style="height:80px; text-align: left; vertical-align: bottom;">Firmas</td>
+                      <td colspan="3" style="height:80px; text-align: left; vertical-align: bottom;">Elaboró</td>
+                      <td colspan="2" style="height:80px; text-align: left; vertical-align: bottom;">Firmas</td>
+                    </tr>
+                    <tr style="">
+                      <td colspan="2" style="height:80px; text-align: center;"></td>
+                      <td colspan="3" style="height:80px; text-align: left; vertical-align: bottom; height=250px;">Elaboró</td>
+                      <td colspan="2" style="height:80px; text-align: left; vertical-align: bottom;">Firmas</td>
+                      <td colspan="3" style="height:80px; text-align: left; vertical-align: bottom;">Elaboró</td>
+                      <td colspan="2" style="height:80px; text-align: left; vertical-align: bottom;">Firmas</td>
+                    </tr>
+
+                    
+                    
+                  </tbody>
+                  </table>
+              </center>
+      </section> 
+      <section class="sheet padding-10mm">
+
+        <img style="margin-left: 10px" src={{header.Foto1}} width="375" height="65">
+        
+        <center><table class="tablaFormato">
+        <tbody>
+        <tr><td colspan="18" style="font-family: 'Source Sans Pro', sans-serif; text-align: center; font-size: 18px;">ARCHIVO FOTOGRÁFICO</td></tr>
+        </tbody>
+        </table>
+      </center>
+        <center>
+          <table class="tablaFormato" style="width: 100%; margin-top: 10px">
+            <tbody>
+              {{#each fotos}}    
+              <tr>
+                <td colspan="6" style="height:250px; width:250px; text-align: center;"><img src={{this.Foto1}} width="250" height="250"></td>
+                <td colspan="6" style="height:250px; width:250px; text-align: center;"><img src={{this.Foto2}} width="250" height="250"></td>
+              </tr>
+              <tr>
+                <td colspan="6" style="text-align: center;">{{this.Codigo1}}</td>
+                <td colspan="6" style="text-align: center;">{{this.Codigo2}}</td>
+              </tr>
+              {{/each}}          
+            </tbody>
+            </table>
+          </center>
+          
+          
+        </section> 
+   </body>
+    </html>
+    

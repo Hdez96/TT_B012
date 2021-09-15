@@ -1,0 +1,142 @@
+<!doctype html>
+    <html>
+       <head>
+          <meta charset="utf-8">
+          <title>Cedula Tecnica de Registro de Autobús</title> 
+          <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+          <link rel="stylesheet" href="http://localhost:3000/normalize.min.css">
+          <link rel="stylesheet" href="http://localhost:3000/paper.css">
+       </head>
+    <body class="letter">
+     <section class="sheet padding-10mm">
+      <br>
+     
+      <div style="float: right;">
+        <img src="http://localhost:3000/mb.png" style="margin-right: 26px;" width="340px" height="50px">
+      </div>
+
+      <br><br><br>
+
+      <div style="margin-right: 40px; margin-left: 40px; border-style: solid; text-align: center; font-family: 'Source Sans Pro', sans-serif; font-weight: bold;" >
+         CÉDULA TÉCNICA DE REGISTRO DEL AUTOBÚS <br> CON NÚMERO ECONÓMICO</div>
+
+      <br>
+
+      <div style="margin-right: 40px; margin-left: 40px; border-style: solid; font-family: 'Source Sans Pro', sans-serif;" >
+      {{#each users}}
+      <p style="margin-left: 5px; font-size: 13px; text-decoration: underline; font-weight: bold;">DATOS GENERALES
+      
+      <div style="width: 500px; font-size: 13px; margin-right: 10px; float: right; position: relative; z-index: 1; border-style: groove; text-align: center; font-family: 'Source Sans Pro', sans-serif; " >
+         {{this.NumeroFactura}}
+      </div>
+      </p>
+
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">Factura o Carta Factura No.
+      <div style="width: 500px; font-size: 13px; margin-right: 10px; float: right; position: relative; z-index: 1; border-style: groove; text-align: center; font-family: 'Source Sans Pro', sans-serif;  " >
+         {{this.FechaAlta}}
+      </div>
+      </p>
+
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">Fecha de Alta
+      <div style="width: 500px; font-size: 13px; margin-right: 10px; float: right; position: relative; z-index: 1; border-style: groove; text-align: center; font-family: 'Source Sans Pro', sans-serif;  " >
+         {{this.Propietario}}
+      </div>
+      </p>
+
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">Propietario
+       <div style="width: 500px; font-size: 13px; margin-right: 10px; float: right; position: relative; z-index: 1; border-style: groove; text-align: center; font-family: 'Source Sans Pro', sans-serif;  " >
+         {{this.Domicilio}}
+      </div>
+      </p>
+      
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">Domicilio
+       <div style="width: 500px; font-size: 13px; margin-right: 10px; float: right; position: relative; z-index: 1; border-style: groove; text-align: center; font-family: 'Source Sans Pro', sans-serif;  " >
+         {{this.Telefono}}
+      </div>
+      </p>
+      
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">Teléfonos
+      <div style="width: 500px; font-size: 13px; margin-right: 10px; float: right; position: relative; z-index: 1; border-style: groove; text-align: center; font-family: 'Source Sans Pro', sans-serif;  " >
+         {{this.Responsable}}
+      </div>
+      </p>
+
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">Responsable
+      </p>
+
+      <p style="margin-left: 5px; font-size: 13px; text-decoration: underline; font-weight: bold;">DATOS AUTOBÚS
+      <div style="width: 500px; font-size: 13px; margin-right: 10px; float: right; position: relative; z-index: 1; border-style: groove; text-align: center; font-family: 'Source Sans Pro', sans-serif;  " >
+         {{this.Marca}}
+      </div>
+      </p>
+
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">Marca
+      <div style="width: 500px; font-size: 13px; margin-right: 10px; float: right; position: relative; z-index: 1; border-style: groove; text-align: center; font-family: 'Source Sans Pro', sans-serif;  " >
+         {{this.Modelo}}
+      </div>    
+      </p>
+
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">Modelo
+      <div style="width: 500px; font-size: 13px; margin-right: 10px; float: right; position: relative; z-index: 1; border-style: groove; text-align: center; font-family: 'Source Sans Pro', sans-serif;  " >
+         {{this.Año}}
+      </div>
+      </p>
+
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">Año
+      <div style="width: 500px; font-size: 13px; margin-right: 10px; float: right; position: relative; z-index: 1; border-style: groove; text-align: center; font-family: 'Source Sans Pro', sans-serif;  " >
+         {{this.NumeroMotor}}
+      </div>
+      </p>
+
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">Motor No.
+      <div style="width: 500px; font-size: 13px; margin-right: 10px; float: right; position: relative; z-index: 1; border-style: groove; text-align: center; font-family: 'Source Sans Pro', sans-serif;" >
+         {{this.NumeroChasis}}
+      </div>
+      </p>
+
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">Chasis No.
+      <div style="width: 500px; font-size: 13px; margin-right: 10px; float: right; position: relative; z-index: 1; border-style: groove; text-align: center; font-family: 'Source Sans Pro', sans-serif;  " >
+         {{this.NumeroCarroceria}}
+      </div>
+      </p>
+
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">Carrocería No.
+      <div style="width: 500px; font-size: 13px; margin-right: 10px; float: right; position: relative; z-index: 1; border-style: groove; text-align: center; font-family: 'Source Sans Pro', sans-serif;  " >
+         {{this.NumeroTransmision}}
+      </div>
+      </p>
+
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">Transmisión No.
+      <div style="width: 500px; font-size: 13px; margin-right: 10px; float: right; position: relative; z-index: 1; border-style: groove; text-align: center; font-family: 'Source Sans Pro', sans-serif;  " >
+         {{this.NumeroEconomico}}
+      </div>
+      </p>
+
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">Económico No.
+<div style="width: 500px; font-size: 13px; margin-right: 10px; float: right; position: relative; z-index: 1; border-style: groove; text-align: center; font-family: 'Source Sans Pro', sans-serif;  " >
+         {{this.PlacaVehicular}}
+      </div>
+      </p>
+        
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">Placa Vehícular.
+      <div style="width: 500px; font-size: 13px; border-bottom:solid black; border-top:none; margin-right: 10px; float: right; position: relative; z-index: 1; text-align: center; font-family: 'Source Sans Pro', sans-serif;  " >
+         {{this.Observaciones}}
+      </div>
+      </p>
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">OBSERVACIONES.</p>
+
+      <p style="margin-left: 5px; font-size: 13px; font-weight: bold;">
+      Elaboró: {{this.Nombre}} 
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp     
+      Fecha: {{this.FechaRegistro}}
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp     Recibió por Metrobús: {{this.Firma}}
+      </p>
+{{/each}}
+      </div>
+</section>
+   </body>
+    </html>
+    
+

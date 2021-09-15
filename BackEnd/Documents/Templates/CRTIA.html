@@ -1,0 +1,195 @@
+<!doctype html>
+    <html>
+       <head>
+          <meta charset="utf-8">
+          <title>Cédula de Revisión Técnica Inicial Del Autobús</title> 
+          <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+          <link rel="stylesheet" href="http://localhost:3000/normalize.min.css">
+          <link rel="stylesheet" href="http://localhost:3000/paper.css">
+       </head>
+    <style type="text/css">
+
+       table.tablaFormato {
+        font-family: Arial, Helvetica, sans-serif;
+        border: 2px solid #000000;
+        width: 98%;
+        margin-left: 0px; 
+        text-align: left;
+        border-collapse: collapse;
+      }
+      table.tablaFormato td, table.tablaFormato th {
+        border: 2px solid #000000;
+        padding: 0px 1px;
+      }
+      table.tablaFormato tbody td {
+        font-size: 10px;
+        font-weight: bold;
+        color: #000000;
+      }
+      table.tablaFormato tfoot td {
+        font-size: 14px;
+      }
+      table.tablaFormato tfoot .links {
+      }
+      table.tablaFormato tfoot .links a{
+        background: #1C6EA4;
+        color: #FFFFFF;
+        border-radius: 5px;
+      }
+    
+      .inlineTable {
+            display: inline-block;
+            border-spacing: 1px;
+        }
+
+    </style>
+
+
+    <body class="landscape">
+
+     <section class="sheet padding-10mm">
+      <img style="margin-left: 10px" src="http://localhost:3000/mb.png" width="375" height="65">
+      <div  style="margin-top: 6px; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 20px"><center>CÉDULA DE REVISIÓN TÉCNICA INICIAL DEL AUTOBÚS</center></div>
+      {{#each users}}
+      <table class="tablaFormato">
+      <tbody>
+      <tr>
+      <td colspan="18" style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 14px;">Identificación del Autobús:</td></tr>
+      
+      <!--<tr style="visibility:collapse">
+      <td>cell1_1</td><td>cell1_2</td><td>cell1_3</td><td>cell1_4</td><td>cell1_5</td><td>cell1_6</td><td>cell1_7</td><td>cell1_8</td><td>cell1_9</td><td>cell1_10</td><td>cell1_11</td><td>cell1_12</td><td>cell1_13</td><td>cell1_14</td><td>cell1_15</td><td>cell1_16</td><td>cell1_16</td><td>cell1_16</td></tr> 
+      <tr>-->
+      <td colspan="1" style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 12px; text-align: center">i</td><td colspan="8">&nbsp Empresa Operadora.:{{this.EmpresaOperadora}}</td><td colspan="1" style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 12px; text-align: center;">vi</td><td colspan="8">&nbsp Modelo.:{{this.Modelo}}</td></tr>
+      <tr>
+      <td colspan="1" style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 12px; text-align: center;">ii</td><td colspan="8">&nbsp Año.:{{this.AñoM}}</td><td colspan="1" style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 12px; text-align: center;">vii</td><td colspan="8">&nbsp Motor.:{{this.Motor}}</td></tr>
+      <tr>
+      <td colspan="1" style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 12px; text-align: center;">iii</td><td colspan="8">&nbsp Motor Eléctrico No.:{{this.MotorElectrico}}</td><td colspan="1" style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 12px; text-align: center;">viii</td><td colspan="8">&nbsp Chasis No.:{{this.Chasis}}</td></tr>
+      <tr>
+      <td colspan="1" style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 12px; text-align: center;">iv</td><td colspan="8">&nbsp Carrocería No.:{{this.Carroceria}}</td><td colspan="1" style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 12px; text-align: center;">ix</td><td colspan="8">&nbsp Transmisión No.:{{this.Transmision}}</td></tr>
+      <tr>
+      <td colspan="1" style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 12px; text-align: center;">v</td><td colspan="8">&nbsp Lectura del Odómetro.:{{this.LecturaOdometro}}</td><td colspan="1" style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 12px; text-align: center;">x</td><td colspan="8">&nbsp Tipo de Autobús.:{{this.Tipo}}</td></tr>
+      </tbody>
+      </table>
+
+      &nbsp
+
+      <table class="tablaFormato">
+      <tbody>
+      <tr>
+      <td>No.</td><td colspan="4">Funcionamiento</td><td colspan="2">Estado</td><td colspan="2">Funcionamiento</td><td>No.</td><td colspan="4">Funcionamiento</td><td colspan="2">Estado</td><td colspan="3">Funcionamiento</td></tr>
+      <!--<<tr style="visibility:collapse">
+      <td>cell1_1</td><td>cell1_2</td><td>cell1_3</td><td>cell1_4</td><td>cell1_5</td><td>cell1_6</td><td>cell1_7</td><td>cell1_8</td><td>cell1_9</td><td>cell1_10</td><td>cell1_11</td><td>cell1_12</td><td>cell1_13</td><td>cell1_14</td><td>cell1_15</td><td>cell1_16</td><td>cell1_17</td><td>cell1_18</td></tr> 
+      <tr>-->
+      <td style="text-align: center;">1</td><td colspan="4">Señalización interior y exterior:</td><td colspan="2">{{this.SeñalInteriorExteriorValue}}</td><td colspan="2">{{this.SeñalInteriorExterior}}</td><td>23</td><td colspan="4"&nbsp>Sistema de Aire Comprimido:</td><td colspan="2">{{this.AireComprimidoValue}}</td><td colspan="3">{{this.AireComprimido}}</td></tr>
+      <tr>
+      <td style="text-align: center;">2</td><td colspan="4">Número económico de la unidad:</td><td colspan="2">{{this.EconomicoValue}}</td><td colspan="2">{{this.Economico}}</td><td>24</td><td colspan="4"&nbsp>Sistema Híbrido:</td><td colspan="2">{{this.HibridoValue}}</td><td colspan="3">{{this.Hibrido}}</td></tr>
+      <tr>
+      <td style="text-align: center;">3</td><td colspan="4" style="font-family: 'Arial', sans-serif; font-weight: bold; font-size: 8px">Laminación y pintura exterior e interior de la unidad:</td><td colspan="2">{{this.LaminacionPinturaExteriorValue}}</td><td colspan="2">{{this.LaminacionPinturaExterior}}</td><td>25</td><td colspan="4"&nbsp>Transmisión:</td><td colspan="2">{{this.Transmision2Value}}</td><td colspan="3">{{this.Transmision2}}</td></tr>
+      <tr>
+      <td style="text-align: center;">4</td><td colspan="4">Defensas:</td><td colspan="2">{{this.DefensasValue}}</td><td colspan="2">{{this.Defensas}}</td><td>26</td><td colspan="4"&nbsp>Sistema de enfriamiento:</td><td colspan="2">{{this.EnfriamientoValue}}</td><td colspan="3">{{this.Enfriamiento}}</td></tr>
+      <tr>
+      <td style="text-align: center;">5</td><td colspan="4">Chasis y gancho de arrastre:</td><td colspan="2">{{this.ChasisGanchoValue}}</td><td colspan="2">{{this.ChasisGancho}}</td><td>27</td><td colspan="4"&nbsp>Ignición del autobús:</td><td colspan="2">{{this.IgnicionValue}}</td><td colspan="3">{{this.Ignicion}}</td></tr>
+      <tr>
+      <td style="text-align: center;">6</td><td colspan="4">Puertas:</td><td colspan="2">{{this.PuertasValue}}</td><td colspan="2">{{this.Puertas}}</td><td>28</td><td colspan="4"&nbsp>Panel o Tablero de instrumentos:</td><td colspan="2">{{this.TableroValue}}</td><td colspan="3">{{this.Tablero}}</td></tr>
+      <tr>
+      <td style="text-align: center;">7</td><td colspan="4">Cristales del Parabrisas:</td><td colspan="2">{{this.CristalesParabrisasValue}}</td><td colspan="2">{{this.CristalesParabrisas}}</td><td>29</td><td colspan="4"&nbsp>Sistema eléctrico:</td><td colspan="2">{{this.ElectricoValue}}</td><td colspan="3">{{this.Electrico}}</td></tr>
+      <tr>
+      <td style="text-align: center;">8</td><td colspan="4">Limpiaparabrisas:</td><td colspan="2">{{this.LimpiaparabrisasValue}}</td><td colspan="2">{{this.Limpiaparabrisas}}</td><td>30</td><td colspan="4"&nbsp>Letrero electrónico de ruta:</td><td colspan="2">{{this.LetreroRutaValue}}</td><td colspan="3">{{this.LetreroRuta}}</td></tr>
+      <tr>
+      <td style="text-align: center;">9</td><td colspan="4" style="font-family: 'Arial', sans-serif; font-weight: bold; font-size: 8px">Cristales de ventanillas, ventilas y emergencia:</td><td colspan="2">{{this.CristalesVentanillasValue}}</td><td colspan="2">{{this.CristalesVentanillas}}</td><td>31</td><td colspan="4"&nbsp>Claxón:</td><td colspan="2">{{this.ClaxonValue}}</td><td colspan="3">{{this.Claxon}}</td></tr>
+      <tr>
+      <td style="text-align: center;">10</td><td colspan="4">Cristal de medallón:</td><td colspan="2">{{this.CristalMedallonValue}}</td><td colspan="2">{{this.CristalMedallon}}</td><td>32</td><td colspan="4" style="font-family: 'Arial', sans-serif; font-weight: bold; font-size: 8px">Sistema desempeñante del parabrisas:</td><td colspan="2">{{this.SistemaDesempañanteValue}}</td><td colspan="3">{{this.SistemaDesempañante}}</td></tr>
+      <tr>
+      <td style="text-align: center;">11</td><td colspan="4">Espejos:</td><td colspan="2">{{this.EspejosValue}}</td><td colspan="2">{{this.Espejos}}</td><td>33</td><td colspan="4"&nbsp>Sistema de aire acondicionado:</td><td colspan="2">{{this.SistemaAireValue}}</td><td colspan="3">{{this.SistemaAire}}</td></tr>
+      <tr>
+      <td style="text-align: center;">12</td><td colspan="4">Visera o parasol:</td><td colspan="2">{{this.ViseraValue}}</td><td colspan="2">{{this.Visera}}</td><td>34</td><td colspan="4"&nbsp>Extractores y ventiladores:</td><td colspan="2">{{this.ExtractoresValue}}</td><td colspan="3">{{this.Extractores}}</td></tr>
+      <tr>
+      <td style="text-align: center;">13</td><td colspan="4">Asiento del conductor:</td><td colspan="2">{{this.AsientoConductorValue}}</td><td colspan="2">{{this.AsientoConductor}}</td><td>35</td><td colspan="4"&nbsp>Alumbrado exterior e interior:</td><td colspan="2">{{this.AlumbradoEIValue}}</td><td colspan="3">{{this.AlumbradoEI}}</td></tr>
+      <tr>
+      <td style="text-align: center;">14</td><td colspan="4">Asientos de pasajeros:</td><td colspan="2">{{this.AsientosPasajerosValue}}</td><td colspan="2">{{this.AsientosPasajeros}}</td><td>36</td><td colspan="4"&nbsp>Frenos:</td><td colspan="2">{{this.FrenosValue}}</td><td colspan="3">{{this.Frenos}}</td></tr>
+      <tr>
+      <td style="text-align: center;">15</td><td colspan="4">Elementos de sujeción:</td><td colspan="2">{{this.ElementosSujecciónValue}}</td><td colspan="2">{{this.ElementosSujección}}</td><td>37</td><td colspan="4"&nbsp>Caja de Dirección y Soportes:</td><td colspan="2">{{this.CajaDireccionValue}}</td><td colspan="3">{{this.CajaDireccion}}</td></tr>
+      <tr>
+      <td style="text-align: center;">16</td><td colspan="4">Escotillas o fallebas:</td><td colspan="2">{{this.EscotillasValue}}</td><td colspan="2">{{this.Escotillas}}</td><td>38</td><td colspan="4"&nbsp>Suspensión:</td><td colspan="2">{{this.SuspensionValue}}</td><td colspan="3">{{this.Suspension}}</td></tr>
+      <tr>
+      <td style="text-align: center;">17</td><td colspan="4">Extintores:</td><td colspan="2">{{this.ExtintoresValue}}</td><td colspan="2">{{this.Extintores}}</td><td>39</td><td colspan="4"&nbsp>Tubo de escape y silenciador:</td><td colspan="2">{{this.TuboEscapeValue}}</td><td colspan="3">{{this.TuboEscape}}</td></tr>
+      <tr>
+      <td style="text-align: center;">18</td><td colspan="4">Botiquín:</td><td colspan="2">{{this.BotiquinValue}}</td><td colspan="2">{{this.Botiquin}}</td><td>40</td><td colspan="4"&nbsp>Sistema de recaudo:</td><td colspan="2">{{this.SistemaRecaudoValue}}</td><td colspan="3">{{this.SistemaRecaudo}}</td></tr>
+      <tr>
+      <td style="text-align: center;">19</td><td colspan="4">Accesorios de seguridad vial:</td><td colspan="2">{{this.AccesoriosSeguridadValue}}</td><td colspan="2">{{this.AccesoriosSeguridad}}</td><td>41</td><td colspan="4"&nbsp>Sistema de telemática:</td><td colspan="2">{{this.SistemaTelematicaValue}}</td><td colspan="3">{{this.SistemaTelematica}}</td></tr>
+      <tr>
+      <td style="text-align: center;">20</td><td colspan="4">Pisos:</td><td colspan="2">{{this.PisosValue}}</td><td colspan="2">{{this.Pisos}}</td><td>42</td><td colspan="4"&nbsp>Tanque de combustible y Urea:</td><td colspan="2">{{this.TanqueCombustibleValue}}</td><td colspan="3">{{this.TanqueCombustible}}</td></tr>
+      <tr>
+      <td style="text-align: center;">21</td><td colspan="4">Articulación:</td><td colspan="2">{{this.ArticulacionValue}}</td><td colspan="2">{{this.Articulacion}}</td><td>43</td><td colspan="4" style="font-family: 'Arial', sans-serif; font-weight: bold; font-size: 8px">Neumáticos y sistema de control de presión:</td><td colspan="2">{{this.NeumaticoSisControlValue}}</td><td colspan="3">{{this.NeumaticoSisControl}}</td></tr>
+      <tr>
+      <td style="text-align: center;">22</td><td colspan="4">Motor:</td><td colspan="2">{{this.Motor2Value}}</td><td colspan="2">{{this.Motor2}}</td><td>&nbsp</td><td colspan="2">CORRECTO</td><td>AC</td><td colspan="2">INCORRECTO</td><td>ER</td><td colspan="2">NO APLICA</td><td>NA</td></tr>
+      </tbody>
+      </table>
+
+      &nbsp
+
+      <div style="height: 100px; border: 2px solid #000000; margin-right: 9px; margin-left: 8px;">
+      <p style="font-family: 'Arial', sans-serif; font-weight: bold; font-size: 10px">&nbsp OBSERVACIONES:</p>
+      <p style="font-family: 'Arial', sans-serif; font-weight: bold; font-size: 10px">{{this.Observaciones}}</p>
+      </div>
+
+      &nbsp
+    <center>
+       <table class="inlineTable" style="">
+         <tr>
+            <td style="border: 2px solid #000000; text-align: center; font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 14px;" colspan="3">Fecha</td>
+        </tr>
+        <tr style="visibility:collapse">
+            <td style="border: 2px solid #000000; ">Cell content</td>
+            <td style="border: 2px solid #000000;">Cell content</td>
+            <td style="border: 2px solid #000000;">Cell content</td>
+        </tr>
+        <tr style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 12px;">
+            <td style="border: 2px solid #000000; text-align: center;">Día</td>
+            <td style="border: 2px solid #000000; text-align: center;">Mes</td>
+            <td style="border: 2px solid #000000; text-align: center;">Año</td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid #000000;">{{this.Dia}}</td>
+            <td style="border: 2px solid #000000;">{{this.Mes}}</td>
+            <td style="border: 2px solid #000000;">{{this.Año}}</td>
+        </tr>
+
+
+
+    </table>
+    <table class="inlineTable" style="margin-left: 10px; ">
+        <tr>
+            <td style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 14px; border: 2px solid #000000; text-align: center;" rowspan="4">Elaboró<br><br></td>
+            <td style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 14px; border: 2px solid #000000; text-align: center;" width="100px">Puesto</td>
+            <td style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 14px; border: 2px solid #000000; text-align: center;" width="220px">Nombre</td>
+            <td style="font-family: 'Source Sans Pro', sans-serif; font-weight: bold; font-size: 14px; border: 2px solid #000000; text-align: center;" width="50px">Firma</td>
+        </tr>
+         <tr style="visibility:collapse">
+            <td style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px; border: 2px solid #000000;">&nbsp</td>
+            <td style="border: 2px solid #000000;">&nbsp</td>
+            <td style="border: 2px solid #000000;">&nbsp</td>
+            <td style="border: 2px solid #000000;">&nbsp</td>
+        </tr>
+        <tr>
+            <td style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px;border: 2px solid #000000; text-align: center; ">&nbsp</td>
+            <td style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px; border: 2px solid #000000; text-align: center;">&nbsp</td>
+            <td style="border: 2px solid #000000; text-align: center;">&nbsp</td>
+
+        </tr>
+        <tr>
+            <td style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px; border: 2px solid #000000; text-align: center;">&nbsp</td>
+            <td style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px; border: 2px solid #000000; text-align: center;">&nbsp</td>
+            <td style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px; border: 2px solid #000000; text-align: center;">&nbsp</td>
+
+        </tr>
+    </table>
+    </center>
+   </section>
+   {{/each}}
+   </body>
+   <script type="text/javascript">
+            
+          </script>
+    </html>
+    
